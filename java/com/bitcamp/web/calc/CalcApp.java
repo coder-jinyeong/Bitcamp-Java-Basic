@@ -5,16 +5,30 @@ package com.bitcamp.web.calc;
  * */
 
 public class CalcApp {
-    public static String cal = "계산기";
-    int num1;
-    int num2;
-    String opcode;
+    public static String CALC_TITLE= "계산기";
+    private int num1;
+    private int num2;
+    private String opcode;
 
     public String calc(int num1, String opcode, int num2){
         this.num1 = num1;
         this.num2 = num2;
         this.opcode = opcode;
-        int sum = num1 + num2;
-        return String.format("%d %s %d = %d" , this.num1, this.opcode, this.num2, sum);
+        int res = 0;
+
+        if(opcode.equals("+")){
+            res = num1 + num2;
+        }
+        else if(opcode.equals("-")) {
+            res = num1 - num2;
+        }
+        else if(opcode.equals("*")) {
+            res = num1 * num2;
+        }
+        else if(opcode.equals("/")) {
+            res = num1 / num2;
+        }
+
+        return String.format("%d %s %d = %d" , this.num1, this.opcode, this.num2, res);
     }
 }

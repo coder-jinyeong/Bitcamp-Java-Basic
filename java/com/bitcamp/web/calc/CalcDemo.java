@@ -10,7 +10,7 @@ public class CalcDemo {
     public static void main(String[] args) {
         CalcApp calcApp = new CalcApp();
         Scanner scanner = new Scanner(System.in);
-        System.out.println(CalcApp.cal);
+        System.out.println(CalcApp.CALC_TITLE);
         System.out.print("첫번째 숫자를 입력하세요 : ");
         int num1 = scanner.nextInt();
         System.out.print("연산자를 입력하세요 : ");
