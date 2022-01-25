@@ -4,7 +4,7 @@ package com.bitcamp.web.login;
  * */
 
 public class LoginApp {
-    public static String webSite = "Naver";
+    public static String webSite = "com";
     String id;
     String pw;
     String name;

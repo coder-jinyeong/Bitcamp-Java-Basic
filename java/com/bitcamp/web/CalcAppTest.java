@@ -1,7 +1,7 @@
 package com.bitcamp.web;
 
 public class CalcAppTest {
-    public static String webSite = "Naver";
+    public static String webSite = "com";
     private int num1 = 0;
     private int num2 = 0;
     private String opcode = "";

@@ -10,7 +10,7 @@ public class LoginDemo {
 
         HelloApp helloApp = new HelloApp();
         Scanner scanner = new Scanner(System.in);
-        String webSite = "Naver";
+        String webSite = "com";
         System.out.println(webSite);
         System.out.println("Input ID : ");
         System.out.println("Input PW : ");

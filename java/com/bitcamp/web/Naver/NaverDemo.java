@@ -14,7 +14,7 @@
  * 2022-01-25         kimjinyeong    최초 생성
  */
 
-package Naver;
+package com.bitcamp.web.Naver;
 
 import java.util.Scanner;
 

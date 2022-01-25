@@ -14,10 +14,10 @@
  * 2022-01-25         kimjinyeong    최초 생성
  */
 
-package Naver;
+package com.bitcamp.web.Naver;
 
 public class NaverApp {
-    public static String Title = "Naver";
+    public static String Title = "com";
     private String id;
     private String pw;
     public String naver(String id, String pw){
