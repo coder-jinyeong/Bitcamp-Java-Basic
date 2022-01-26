@@ -19,7 +19,7 @@ public class CalcApp {
         //switch(){}
         //for(){}
         //while(){}
-
+        /*
         if(opcode.equals("+")){
             res = num1 + num2;
         }
@@ -35,7 +35,13 @@ public class CalcApp {
         else{
             res = 0;
         }
-
+        */
+        switch(opcode){
+            case "+" : res = num1 + num2; break;
+            case "-" : res = num1 - num2; break;
+            case "*" : res = num1 * num2; break;
+            case "/" : res = num1 / num2; break;
+        }
         String result = String.format("%d %s %d = %d" , this.num1, this.opcode, this.num2, res);
         return result;
     }

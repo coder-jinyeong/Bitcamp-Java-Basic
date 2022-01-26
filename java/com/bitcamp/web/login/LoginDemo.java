@@ -9,7 +9,7 @@ public class LoginDemo {
     public static void main(String[] args) {
         LoginApp loginApp = new LoginApp();
         Scanner scanner = new Scanner(System.in);
-        System.out.println(LoginApp.webSite);
+        System.out.println(LoginApp.WEBSITE);
         System.out.print("아이디를 입력하세요 : ");
         String id = scanner.next();
         System.out.print("비밀번호를 입력하세요 : ");
