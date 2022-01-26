@@ -16,6 +16,10 @@ public class CalcApp {
         this.opcode = opcode;
         int res = 0;
 
+        //switch(){}
+        //for(){}
+        //while(){}
+
         if(opcode.equals("+")){
             res = num1 + num2;
         }
@@ -28,7 +32,11 @@ public class CalcApp {
         else if(opcode.equals("/")) {
             res = num1 / num2;
         }
+        else{
+            res = 0;
+        }
 
-        return String.format("%d %s %d = %d" , this.num1, this.opcode, this.num2, res);
+        String result = String.format("%d %s %d = %d" , this.num1, this.opcode, this.num2, res);
+        return result;
     }
 }
