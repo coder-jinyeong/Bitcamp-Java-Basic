@@ -43,22 +43,20 @@ public class GradeDemo {
         Scanner scanner = new Scanner(System.in);
         GradeApp gradeApp = new GradeApp();
         System.out.println(GradeApp.GRADE_TITLE);
-        String name;
-        int kor;
-        int eng;
-        int math;
-        int total = 0;
-        int avg = 0;
-        String pass = "";
-        System.out.print("이름 : ");
-        name = scanner.next();
-        System.out.print("국어 : ");
-        kor = scanner.nextInt();
-        System.out.print("영어 : ");
-        eng = scanner.nextInt();
-        System.out.print("수학 : ");
-        math = scanner.nextInt();
-        String res = gradeApp.gd(name, kor, eng, math);
-        System.out.println(res);
+
+        for(int i = 1; i < 3; i++) {
+            System.out.println((i + "번 학생"));
+            System.out.print("이름 : ");
+            String name = scanner.next();
+            System.out.print("국어 : ");
+            int kor = scanner.nextInt();
+            System.out.print("영어 : ");
+            int eng = scanner.nextInt();
+            System.out.print("수학 : ");
+            int math = scanner.nextInt();
+
+            String res = gradeApp.getGrade(name, kor, eng, math);
+            System.out.println(res);
+        }
     }
 }

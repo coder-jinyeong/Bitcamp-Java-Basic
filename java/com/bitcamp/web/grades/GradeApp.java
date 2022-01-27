@@ -42,7 +42,7 @@ public class GradeApp {
     private int eng;
     private int math;
 
-    public String gd(String name,int kor, int eng, int math){
+    public String getGrade(String name,int kor, int eng, int math){
         this.name = name;
         this.kor = kor;
         this.eng = eng;
