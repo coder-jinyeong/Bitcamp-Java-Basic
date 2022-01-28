@@ -16,7 +16,7 @@
 package com.bitcamp.web.google;
 
 public class GoogleApp {
-    public static String title = "Google";
+    public static String GOOGLE_TITLE = "Google";
     private String search;
 
     public String google(String search){

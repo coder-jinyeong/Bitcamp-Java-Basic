@@ -4,7 +4,7 @@ package com.bitcamp.web.login;
  * */
 
 public class LoginApp {
-    public static String WEBSITE = "com";
+    public static String LOGIN_TITLE = "LOGIN";
     String id;
     String pw;
     String name;

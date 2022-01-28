@@ -7,18 +7,9 @@ package com.bitcamp.web.calc;
 import java.util.Scanner;
 
 public class CalcDemo {
-    public static void main(String[] args) {
+    public String excute(int num1, String opcode, int num2) {
         CalcApp calcApp = new CalcApp();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(CalcApp.CALC_TITLE);
-        System.out.print("첫번째 숫자를 입력하세요 : ");
-        int num1 = scanner.nextInt();
-        System.out.print("연산자를 입력하세요 : ");
-        String opcode = scanner.next();
-        System.out.print("두번째 숫자를 입력하세요 : ");
-        int num2 = scanner.nextInt();
-        String result = calcApp.calc(num1, opcode, num2);
-        System.out.print("연산 결과 : " + result);
+        return calcApp.calc(num1,opcode,num2);
 
 
     }

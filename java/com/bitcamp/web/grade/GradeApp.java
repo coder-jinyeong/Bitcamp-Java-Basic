@@ -33,10 +33,10 @@
  * 2022-01-26         kimjinyeong    최초 생성
  */
 
-package com.bitcamp.web.grades;
+package com.bitcamp.web.grade;
 
 public class GradeApp {
-    static String GRADE_TITLE = "성적표";
+    public static String GRADE_TITLE = "성적표";
     private String name;
     private int kor;
     private int eng;
