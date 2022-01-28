@@ -28,6 +28,6 @@ public class LoginDTO {
     public String getPw(){return pw;}
     public void setPw(String pw){this.pw = pw;}
     public String getName(){return name;}
-    public void setName(String Name){this.name = name;}
+    public void setName(String name){this.name = name;}
 
 }
