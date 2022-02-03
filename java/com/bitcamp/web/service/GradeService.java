@@ -35,7 +35,7 @@ public class GradeService {
                         + " * 평균(정수): %d점\n"
                         + " * 합격여부: %s\n"
                         + " * #######################",
-                GradeApp.GRADE_TITLE, grade.getName(), grade.getKor(), grade.getEng(), grade.getMath(), total, avg, pass);
+                GradeDTO.GRADE_TITLE, grade.getName(), grade.getKor(), grade.getEng(), grade.getMath(), total, avg, pass);
 
         return res ;
 
