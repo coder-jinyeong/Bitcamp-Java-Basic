@@ -16,24 +16,68 @@
 
 package com.bitcamp.web.controller;
 
-import com.bitcamp.web.domain.GradeDTO;
-import com.bitcamp.web.service.GradeService;
-
 import java.util.Scanner;
 
 public class TempController {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        String[] arr = {"권혜민", "서성민", "조현국", "김한슬", "김진영",
-                        "해시", "DFS", "BFS", "정렬", "스택", "큐", "힙",
-                        "그래프", "완전탐색", "탐욕법", "동적계획법", "이분탐색","","","" };
-        for(int i = 0; i <= arr.length; i++){
-            if(arr[i] == "")break;
-            System.out.print(i + " : " + arr[i] + "\t");
-            if(((i + 1) % 5) == 0) System.out.println();
+        System.out.println("Q1. 팀별 과제를 출력하세요 : ");
+        String[] arr = {"권혜민", "조현국",   "김진영",    "김한슬",    "서성민",
+                        "정렬",   "해시",        "힙",     "완전탐색",    "DP",
+                        "스택",  "깊이우선탐색","그래프",    "탐욕법",    "이중탐색",
+                        "큐",    "너비우선탐색"};
+          String s = "";
+        for(int i = 0; i < arr.length; i++){
+            s += i + " : " + arr[i] + "\t";
+            if(( i + 1 ) % 5 == 0) s += "\n";
         }
+        System.out.println(s + "\n");
+
+        System.out.println("Q2.  팀장이 맡은 과제만 출력하세요 . 예시 ) 김진영 , 힙, 그래프");
+        String zzang = "";
+        for(int i = 0; i < arr.length; i++ ){
+           if(arr[i].equals("김진영")){
+                for(int j = 0; j < 3; j++){
+                   zzang += arr[i] + ",";
+                   i += 5;
+                }
+            }
+        }
+        System.out.println(zzang + "\n");
+
+        System.out.println("Q3. 큐를 담당한 사람을 출력하세요. 예 ) 큐를 담당한 사람 : 권혜민");
+        String qManager = "";
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i].equals("큐")){
+                for(int j = 0; j < 3 ;j++){
+                    qManager += arr[i - (j * 5)] + ",";
+                }
+                qManager += "를 담당한 사람 : " + arr[i -15];
+            }
+        }
+        System.out.println(qManager + "\n");
+
+        System.out.println("Q4. 팀원별 과제 수를 출력하세요 예 ) 권혜민(3개), 조현국(3개), 김진영(2개)," +
+                        "김한슬(2개)" + "서성민(2개)");
+        int count = 0;
+        String countManager = "";
+        for(int i = 0; i < 5; i++){
+            count = (arr.length - (i + 1)) / 5;
+            countManager += arr[i] + "(" + count + "개), ";
+        }
+        System.out.println(countManager + "\n");
+
+        System.out.print("Q5. 입력한 과제의 인덱스를 추출하세요\n과제를 입력하세요 :  ");
+        String sub = scanner.next();
+        int index = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i].equals(sub))index = i % 5;
+        }
+        System.out.println("입력한 과제의 인덱스 : " + index);
+
     }
 }
+
 
 
 
