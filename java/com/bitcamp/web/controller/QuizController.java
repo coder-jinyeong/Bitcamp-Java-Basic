@@ -18,7 +18,7 @@ package com.bitcamp.web.controller;
 
 import java.util.Scanner;
 
-public class TempController {
+public class QuizController {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         String[] arr = {"권혜민", "조현국",   "김진영",    "김한슬",    "서성민",

@@ -14,7 +14,7 @@
  * 2022-01-25         kimjinyeong    최초 생성
  */
 
-package com.bitcamp.web.Naver;
+package com.bitcamp.web.naver;
 
 public class NaverApp {
     public static String Title = "com";
