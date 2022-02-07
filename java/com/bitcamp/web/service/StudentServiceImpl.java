@@ -21,17 +21,16 @@ import com.bitcamp.web.domain.*;
 public class StudentServiceImpl implements StudentService{
     @Override
     public String bmi(BmiDTO bmi) {
-        double m = bmi.getCm() / 100;
-        double val = Math.pow(m,2);
-        double sum = bmi.getKg() / val;
+        double m = bmi.getTall() / 100;
+        double sum = bmi.getWeight() / (m * m);
         String sum2;
-        if(sum <= 18.5){
+        if(sum < 18.5){
             sum2 = "저체중";
         }
-        else if(18.5 < sum && sum <  23){
+        else if(18.5 <= sum && sum <  22.9){
             sum2 = "정상";
         }
-        else if(23 < sum && sum < 25){
+        else if(23 < sum && sum < 24.9){
             sum2 = "과체중";
         }
         else{

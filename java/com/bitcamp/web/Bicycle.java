@@ -21,5 +21,6 @@ public class Bicycle {
         System.out.println("cadence : " +
                 cadence + " speed : " +
                 speed + " gear : " + gear);
+
     }
 }

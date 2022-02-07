@@ -21,5 +21,5 @@ public interface QuizService {
     void quiz2(String[] arr);
     void quiz3(String[] arr);
     void quiz4(String[] arr);
-    void quiz5(String[] arr);
+    void quiz5(String res, String[] arr);
 }

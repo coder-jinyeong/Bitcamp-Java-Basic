@@ -18,29 +18,32 @@ package com.bitcamp.web.domain;
 
 public class BmiDTO {
     public static String BMI_TITLE = "BMI";
-    private double cm;
-    private double kg;
+    private double tall;
+    private double weight;
     private String name;
 
-    public double getKg(){
-        return kg;
+    public double getTall() {
+        return tall;
     }
-    public void setKg(double kg){
-        this.kg = kg;
+
+    public void setTall(double tall) {
+        this.tall = tall;
     }
-    public double getCm(){
-        return cm;
+
+    public double getWeight() {
+        return weight;
     }
-    public void setCm(double cm){
-        this.cm = cm;
+
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
-
-
 }
 
