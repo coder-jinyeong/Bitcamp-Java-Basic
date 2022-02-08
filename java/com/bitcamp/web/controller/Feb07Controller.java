@@ -36,9 +36,13 @@ public class Feb07Controller {
 
         while (true) {
             String res = "";
-            System.out.println("게임 종료 : 0, 주사위 : 1, 가위바위보 : 2, " +
-                    "입력받은 두 수 사이의 있는 소수 구하기 : 3, 입력받은 연도가 윤년인지 평년인지 판단하기 : 4, " +
-                    "임의로 입력받은 숫자 맞추기 : 5");
+            System.out.println("메뉴를 선택하세요.\n" +
+                    " 0.EXIT\n " +
+                    "1.주사위\n " +
+                    "2.가위바위보\n " +
+                    "3.입력받은 두수 사이의 소수구하기\n" +
+                    "4.입력받은 년도가 윤년인지 평년인지 판단하기\n" +
+                    "5.임의로 입력받은 숫자 맞추기");
                 switch(scanner.next()){
                     case "0":
                         System.out.println("시스템종료");
@@ -48,6 +52,8 @@ public class Feb07Controller {
                         service.feb07();
                         break;
                     case "2":
+                        System.out.println("2.가위바위보");
+                        service.rps(scanner);
                         break;
                     case "3":
                         System.out.println(" 소수 구하기 ");
@@ -57,7 +63,7 @@ public class Feb07Controller {
                         service.leapYear(scanner);
                         break;
                     case "5":
-                        res = service.quiz5();
+                        res = service.numberGolf();
                         System.out.println(res);
                         break;
                     default:

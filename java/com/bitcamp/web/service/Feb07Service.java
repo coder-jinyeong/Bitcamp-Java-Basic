@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public interface Feb07Service {
     void leapYear(Scanner scanner);
-    String quiz5();
+    String numberGolf();
     void primeNumber(Scanner scanner);
-
     void feb07();
+    void rps(Scanner scanner);
 }
