@@ -26,8 +26,7 @@ import com.bitcamp.web.algorithm.service.HeapServiceImpl;
 import java.util.Scanner;
 
 public class AlgoController {
-        public static void main(String[]args){
-            Scanner scanner = new Scanner(System.in);
+        public void execute(Scanner scanner){
             GraphService graphService = new GraphServiceImpl();
             HeapService heapService = new HeapServiceImpl();
             while(true){
