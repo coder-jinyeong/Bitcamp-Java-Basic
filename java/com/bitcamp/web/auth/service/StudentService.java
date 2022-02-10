@@ -19,9 +19,10 @@ package com.bitcamp.web.auth.service;
 import com.bitcamp.web.auth.domain.*;
 
 public interface StudentService {
+
     String bmi(BmiDTO bmi);
     String calc(CalcDTO calc);
     String google(GoogleDTO google);
     String grade(GradeDTO grade);
-    String login(LoginDTO login);
+    String login(UserDTO login);
 }

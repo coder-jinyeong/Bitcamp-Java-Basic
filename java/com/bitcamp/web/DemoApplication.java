@@ -18,7 +18,6 @@ package com.bitcamp.web;
 
 import com.bitcamp.web.algorithm.controller.AlgoController;
 import com.bitcamp.web.auth.controller.AuthController;
-import com.bitcamp.web.quiz.controller.Feb06Controller;
 import com.bitcamp.web.oop.controller.OopController;
 import com.bitcamp.web.quiz.controller.QuizController;
 import org.springframework.boot.SpringApplication;

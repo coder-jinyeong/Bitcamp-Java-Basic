@@ -27,7 +27,7 @@ public class AuthController {
         CalcDTO calc = new CalcDTO();
         GoogleDTO google = new GoogleDTO();
         GradeDTO grade = new GradeDTO();
-        LoginDTO login = new LoginDTO();
+
         StudentService service = new StudentServiceImpl();
         while (true) {
             String res = "";
@@ -50,6 +50,7 @@ public class AuthController {
                     calc.setNum2(scanner.nextInt());
                     res = service.calc(calc);
                     break;
+
                 case "3":
                     System.out.println(GoogleDTO.GOOGLE_TITLE + "\n검색");
                     google.setSearch(scanner.next());
@@ -64,11 +65,12 @@ public class AuthController {
                     res = service.grade(grade);
                     break;
                 case "5":
-                    System.out.println(LoginDTO.LOGIN_TITLE + "\nID, PW, Name");
-                    login.setId(scanner.next());
-                    login.setPw(scanner.next());
-                    login.setName(scanner.next());
-                    res = service.login(login);
+                    System.out.println(UserDTO.LOGIN_TITLE + "\nID, PW, Name");
+                    UserDTO u = UserDTO.getInstance();
+                    u.getInstance().setId(scanner.next());
+                    u.getInstance().setPw(scanner.next());
+                    u.setName(scanner.next());
+                    res = service.login(u);
                     break;
                 default:
                     System.out.println("Wrong Number");
@@ -76,5 +78,12 @@ public class AuthController {
             }
             System.out.println(res);
         }
+
+
+
+
+
+
+
     }
 }

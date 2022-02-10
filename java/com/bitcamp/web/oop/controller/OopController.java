@@ -43,14 +43,14 @@ public class OopController {
                     Phone phone = new Phone("금성전화기","금성전화");
                     CelPhone celPhone = new CelPhone("이동중에","핸드폰","블랙베리");
                     IPhone iPhone = new IPhone("애플");
-                    GalPhone galPhone = new GalPhone();
+                    GalPhone galPhone = new GalPhone("삼성");
                     PhoneService phoneService = new PhoneServiceImpl();
                     System.out.println("[소메뉴] 0.Exit 1.집전화 2.휴대폰 3.아이폰 4.갤럭시폰");
                     switch(scanner.next()){
                         case "0":
                             System.out.println("exit");return;
                         case "1":
-                            phone.setCall("여보세요, *** 입니다");
+                            phone.setCall("여보세요");
                             phoneService.usePhone(phone);
                             break;
                         case "2":
@@ -61,6 +61,9 @@ public class OopController {
                             iPhone.setSearch("뉴스");
                             phoneService.useIPhone(iPhone);
                             break;
+                        case "4":
+                            galPhone.setPay("삼성 페이");
+                            phoneService.useGalPhone(galPhone);
                     }
             }
         }

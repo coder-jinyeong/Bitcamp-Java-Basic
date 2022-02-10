@@ -16,8 +16,18 @@
 
 package com.bitcamp.web.auth.domain;
 
-public class LoginDTO {
+public class UserDTO {
+
     public static String LOGIN_TITLE = "LOGIN";
+
+    private static UserDTO userDTO = new UserDTO();
+
+    private UserDTO(){}
+
+    public static UserDTO getInstance(){
+        return userDTO;
+    }
+
     public static String PASSWORD = "abc";
     private String id;
     private String pw;

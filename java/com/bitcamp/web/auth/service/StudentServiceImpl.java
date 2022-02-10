@@ -79,10 +79,10 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public String login(LoginDTO login) {
+    public String login(UserDTO login) {
         String res = String.format("ID : %s, PW : %s, Name : %s",login.getId(), login.getPw(), login.getName() );
         String res1;
-        res1 = (login.getPw().equals(LoginDTO.PASSWORD)) ? String.format("\n%s 님의 비번 %s 이 맞습니다. 로그인 성공 ", login.getName(), login.getPw())
+        res1 = (login.getPw().equals(UserDTO.PASSWORD)) ? String.format("\n%s 님의 비번 %s 이 맞습니다. 로그인 성공 ", login.getName(), login.getPw())
                 :String.format("\n%s 님의 비번 %s 이 틀립니다. 로그인 실패 ", login.getName(), login.getPw());
         return res + res1;
     }

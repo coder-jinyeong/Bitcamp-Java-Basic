@@ -18,7 +18,8 @@
 
 package com.bitcamp.web.oop.domain;
 
-public class IPhone extends CelPhone{
+
+public class IPhone extends CelPhone {
     public final static String KIND = "아이폰";
     private String search;
     public IPhone(String company){
