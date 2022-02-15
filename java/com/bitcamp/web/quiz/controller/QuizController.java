@@ -25,8 +25,9 @@ public class QuizController {
         Feb06Service feb06Service = new Feb06ServiceImpl();
         Feb07Service feb07Service = new Feb07ServiceImpl();
         Feb08Service feb08Service = new Feb08ServiceImpl();
+        Feb10Service feb10Service = new Feb10ServiceImpl();
         while (true){
-            System.out.println("[서브메뉴]\n 0)Exit 1)2월6일 2)2월7일 3)2월8일 3)2월9일");
+            System.out.println("[서브메뉴]\n 0)Exit 1)2월6일 2)2월7일 3)2월8일 4)2월10일");
             switch (scanner.next()){
                 case "0":
                     System.out.println("### Exit ###");
@@ -137,6 +138,43 @@ public class QuizController {
                             default:
                                 System.out.println("잘못 입력하였습니다.");
                         }
+                    }
+                case "4":
+                    while(true){
+                        String res = "";
+                        System.out.println("메뉴를 선택하세요.\n" +
+                                "0.EXIT " +
+                                "1. 권혜민" +
+                                "2. 서성민 " +
+                                "3. 조현국 " +
+                                "4. 김한슬 " +
+                                "5. 김진영");
+                        switch(scanner.next()){
+                            case "0":
+                                System.out.println("시스템종료");
+                                return;
+                            case "1":
+
+                                break;
+                            case "2":
+
+                                break;
+                            case "3":
+
+                                break;
+                            case "4":
+
+                                break;
+                            case "5":
+                                res = feb10Service.rectangleStarPrint();
+                                System.out.println(res);
+                                res = feb10Service.triangleStarPrint();
+                                System.out.println(res);
+                                break;
+                            default:
+                                System.out.println("잘못 입력하였습니다.");
+                        }
+
                     }
 
             }

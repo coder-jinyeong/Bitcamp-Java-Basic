@@ -38,7 +38,8 @@ public class DemoApplication {
             System.out.println("[메인메뉴] \n 0.Exit 1.Auth 2.OOP 3.Quiz 4.Algorithm ");
             switch (scanner.next()){
                 case "0":
-                    System.out.println("### Exit ###"); return;
+                    System.out.println("### Exit ###");
+                    return;
                 case "1":
                     System.out.println("### Auth ###");
                     studentController.execute(scanner);

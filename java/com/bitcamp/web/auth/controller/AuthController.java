@@ -23,7 +23,6 @@ import com.bitcamp.web.auth.service.StudentServiceImpl;
 import java.util.Scanner;
 public class AuthController {
     public void execute(Scanner scanner) {
-        BmiDTO bmi = new BmiDTO();
         CalcDTO calc = new CalcDTO();
         GoogleDTO google = new GoogleDTO();
         GradeDTO grade = new GradeDTO();
@@ -37,6 +36,7 @@ public class AuthController {
                     System.out.println("Exit");
                     return;
                 case "1":
+                    BmiDTO bmi = new BmiDTO();
                     System.out.println(BmiDTO.BMI_TITLE + "\n키 몸무게 이름");
                     bmi.setTall(scanner.nextDouble());
                     bmi.setWeight(scanner.nextDouble());

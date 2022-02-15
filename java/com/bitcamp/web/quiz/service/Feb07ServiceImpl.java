@@ -83,12 +83,15 @@ public class Feb07ServiceImpl implements Feb07Service {
 
     @Override
     public void feb07() {
-        int dice  = (int)(Math.random()*6)+1;
-        // int dice 는 int random 한 값을 1~6 까지
-        int dice1  = (int)(Math.random()*6)+1;
-        System.out.println("첫번째 주사위 숫자 : "+ dice+ "\n두번째 주사위 숫자 : "  + dice1);
-        int res = dice + dice1;
-        System.out.println("주사위 두개를 더한값 : " + res);
+        Random random = new Random();
+        double d = Math.random();
+        int user = (int)(d * 6) + 1;
+        System.out.println("플레이어 숫자 : " + user);
+        int com = random.nextInt(5) + 1;
+        System.out.println("컴퓨터 숫자 : " + com);
+        String s = (user > com)? "이겼다.":"졌다.";;
+        if(user != com) s = (user > com)? "이겼다.":"졌다.";
+        System.out.println(s);
 
     }
 
