@@ -19,9 +19,9 @@ package com.bitcamp.web.quiz.service;
 public interface Feb10Service {
     // 아래 문제들은 모두 스캐너 없이 , Math랜덤으로 처리합니다
     // 1인
-    void bubbleSort();
-    void insertionSort();
-    void selectionSort();
+    void bubbleSort(int[] arr);
+    void insertionSort(int[]arr);
+    void selectionSort(int[]arr);
     // 1인
     void quickSort();
     void mergeSort();
@@ -34,4 +34,5 @@ public interface Feb10Service {
     String rectangleStarPrint();
     // 정삼각형 별찍기
     String triangleStarPrint();
+    void print(int[]arr);
 }

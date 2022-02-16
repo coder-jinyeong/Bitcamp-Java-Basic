@@ -26,6 +26,9 @@ public class QuizController {
         Feb07Service feb07Service = new Feb07ServiceImpl();
         Feb08Service feb08Service = new Feb08ServiceImpl();
         Feb10Service feb10Service = new Feb10ServiceImpl();
+        Scanner scan = new Scanner(System.in);
+        int [] arr1 = new int[10];
+
         while (true){
             System.out.println("[서브메뉴]\n 0)Exit 1)2월6일 2)2월7일 3)2월8일 4)2월10일");
             switch (scanner.next()){
@@ -142,32 +145,62 @@ public class QuizController {
                 case "4":
                     while(true){
                         String res = "";
-                        System.out.println("메뉴를 선택하세요.\n" +
-                                "0.EXIT " +
-                                "1. 권혜민" +
-                                "2. 서성민 " +
-                                "3. 조현국 " +
-                                "4. 김한슬 " +
-                                "5. 김진영");
+                        System.out.println("0.Exit" +
+                                " 1.버블" +
+                                " 2.인설트 " +
+                                " 3.선택" +
+                                " 4.퀵" +
+                                " 5.마진" +
+                                " 6.마법" +
+                                " 7." +
+                                " 8.별" +
+                                " 9.삼각별");
                         switch(scanner.next()){
                             case "0":
                                 System.out.println("시스템종료");
                                 return;
                             case "1":
-
+                                for(int i = 0; i < arr1.length; i++){
+                                    arr1[i] = (int) (Math.random() * 100);
+                                }
+                                feb10Service.bubbleSort(arr1);
+                                System.out.println("버블");
+                                System.out.println();
                                 break;
                             case "2":
-
+                                for(int i = 0; i < arr1.length; i++){
+                                    arr1[i] = (int) (Math.random() * 100);
+                                }
+                                feb10Service.insertionSort(arr1);
+                                System.out.println("인설트");
+                                System.out.println();
                                 break;
                             case "3":
+                                for(int i = 0; i < arr1.length; i++){
+                                    arr1[i] = (int) (Math.random() * 100);
+                                }
+                                feb10Service.selectionSort(arr1);
+                                System.out.println();
 
+                                System.out.println("선택");
                                 break;
                             case "4":
 
                                 break;
                             case "5":
+
+                                break;
+                            case "6":
+
+                                break;
+                            case "7":
+
+                                break;
+                            case "8":
                                 res = feb10Service.rectangleStarPrint();
                                 System.out.println(res);
+                                break;
+                            case "9":
                                 res = feb10Service.triangleStarPrint();
                                 System.out.println(res);
                                 break;
