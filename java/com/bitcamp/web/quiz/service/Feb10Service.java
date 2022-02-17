@@ -23,7 +23,7 @@ public interface Feb10Service {
     void insertionSort(int[]arr);
     void selectionSort(int[]arr);
     // 1인
-    void quickSort();
+    void quickSort(int []arr1, int start, int end);
     void mergeSort();
     // 1인
     void magicSquare();

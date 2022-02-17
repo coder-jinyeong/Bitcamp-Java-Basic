@@ -26,7 +26,6 @@ public class QuizController {
         Feb07Service feb07Service = new Feb07ServiceImpl();
         Feb08Service feb08Service = new Feb08ServiceImpl();
         Feb10Service feb10Service = new Feb10ServiceImpl();
-        Scanner scan = new Scanner(System.in);
         int [] arr1 = new int[10];
 
         while (true){
@@ -150,9 +149,9 @@ public class QuizController {
                                 " 2.인설트 " +
                                 " 3.선택" +
                                 " 4.퀵" +
-                                " 5.마진" +
-                                " 6.마법" +
-                                " 7." +
+                                " 5.합병정렬" +
+                                " 6.마방진" +
+                                " 7.지그제그" +
                                 " 8.별" +
                                 " 9.삼각별");
                         switch(scanner.next()){
@@ -185,13 +184,18 @@ public class QuizController {
                                 System.out.println("선택");
                                 break;
                             case "4":
-
+                                for(int i = 0; i < 10; i++)arr1[i] = (int)(Math.random()*100);
+                                feb10Service.quickSort(arr1,0, arr1.length -1 );
+                                for(int i = 0; i < arr1.length; i++) {
+                                    System.out.print(arr1[i] + " ");
+                                }
+                                System.out.println();
                                 break;
                             case "5":
 
                                 break;
                             case "6":
-
+                                feb10Service.magicSquare();
                                 break;
                             case "7":
 
