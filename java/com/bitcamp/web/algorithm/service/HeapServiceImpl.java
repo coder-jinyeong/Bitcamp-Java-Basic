@@ -16,10 +16,30 @@
 
 package com.bitcamp.web.algorithm.service;
 
+import java.util.PriorityQueue;
+
 public class HeapServiceImpl implements HeapService{
     @Override
     public int spicy(int[] scoville, int K) {
-        return 0;
+        int answer = 0;
+        PriorityQueue<Integer> heap = new PriorityQueue();
+
+        for(int sco : scoville){
+            heap.add(sco);
+        }
+
+        while(heap.peek() <= K){
+            if(heap.size() == 1){
+                return -1;
+            }
+            int a = heap.poll();
+            int b = heap.poll();
+
+            heap.add(a + (b*2));
+            answer ++ ;
+        }
+
+        return answer;
     }
 
     @Override

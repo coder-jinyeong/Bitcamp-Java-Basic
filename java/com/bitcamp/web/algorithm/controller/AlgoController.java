@@ -23,6 +23,7 @@ import com.bitcamp.web.algorithm.service.HeapService;
 import com.bitcamp.web.algorithm.service.HeapServiceImpl;
 
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class AlgoController {
@@ -82,9 +83,18 @@ public class AlgoController {
                             case "0":
                                 System.out.println("Exit");return;
                             case "1":
-                                int [] scoville = new int[10];
-                                int k = 0 ;
-                                heapService.spicy(scoville,k);
+                                System.out.print("가진 음식의 개수를 입력하세요 : ");
+                                int [] scoville = new int[scanner.nextInt()];
+                                System.out.println(scoville.length + "개 음식의 각 scoville 지수를 입력하세요 ");
+                                for(int i = 0; i < scoville.length; i++){
+                                    System.out.print((i + 1) + " 번째 음식의 스코빌 지수 : ");
+                                    scoville[i] = scanner.nextInt();
+                                }
+                                System.out.print("원하시는 스코빌 지수를 입력하세요 : ");
+                                int k = scanner.nextInt();
+                                System.out.println("모든 음식의 스코빌 : " + Arrays.toString(scoville) + "\n원하는 스코빌 지수 : " + k +
+                                        "\n섞은 횟수 : " + heapService.spicy(scoville,k));
+
                                 int [][] jobs = new int[10][10];
                                 heapService.diskController(jobs);
                                 String [] operations = new String[10];
