@@ -192,7 +192,8 @@ public class QuizController {
                                 System.out.println();
                                 break;
                             case "5":
-
+                                feb10Service.mergeSort(scanner);
+                                System.out.println();
                                 break;
                             case "6":
                                 feb10Service.magicSquare();

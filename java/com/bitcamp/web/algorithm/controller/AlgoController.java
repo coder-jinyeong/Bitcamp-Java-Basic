@@ -97,6 +97,7 @@ public class AlgoController {
 
                                 int [][] jobs = new int[10][10];
                                 heapService.diskController(jobs);
+
                                 String [] operations = new String[10];
                                 heapService.priorityQueue(operations);
                                 break;

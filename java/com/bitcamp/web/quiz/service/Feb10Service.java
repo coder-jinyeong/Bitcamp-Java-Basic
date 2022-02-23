@@ -15,7 +15,7 @@
  */
 
 package com.bitcamp.web.quiz.service;
-
+import java.util.Scanner;
 public interface Feb10Service {
     // 아래 문제들은 모두 스캐너 없이 , Math랜덤으로 처리합니다
     // 1인
@@ -24,7 +24,7 @@ public interface Feb10Service {
     void selectionSort(int[]arr);
     // 1인
     void quickSort(int []arr1, int start, int end);
-    void mergeSort();
+    void mergeSort(Scanner scanner);
     // 1인
     void magicSquare();
     // 1인
@@ -34,5 +34,5 @@ public interface Feb10Service {
     String rectangleStarPrint();
     // 정삼각형 별찍기
     String triangleStarPrint();
-    void print(int[]arr);
+
 }

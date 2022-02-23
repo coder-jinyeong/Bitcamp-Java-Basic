@@ -32,8 +32,8 @@ public class HeapServiceImpl implements HeapService{
             if(heap.size() == 1){
                 return -1;
             }
-            int a = heap.poll();
-            int b = heap.poll();
+            int a = heap.remove();
+            int b = heap.remove();
 
             heap.add(a + (b*2));
             answer ++ ;
