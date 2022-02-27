@@ -28,7 +28,7 @@ public interface Feb10Service {
     // 1인
     void magicSquare();
     // 1인
-    void zigzag();
+    String zigzag();
     // 1인
     // 좌측90도 직각삼각형 별찍기
     String rectangleStarPrint();

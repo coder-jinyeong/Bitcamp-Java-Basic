@@ -212,8 +212,32 @@ public class Feb10ServiceImpl implements Feb10Service{
         }
 
         @Override
-        public void zigzag () {
+        public String zigzag () {
+            String res = "";
+            int count = (int)(Math.random() * 100);
+            int [][]arr = new int[count][count];
+            int temp = 1;
+            System.out.println(count + " 로 지그재그 만들기");
+            for(int i = 0; i < count; i ++){
+                if(i % 2 == 0){
+                    for(int j = 0; j < count; j++){
+                        arr[i][j] = temp;
+                        temp ++;
+                    }
+                }else
+                    for(int j = count - 1; j >= 0 ; j--){
+                        arr[i][j] = temp;
+                        temp ++;
+                    }
+            }
+            for(int i = 0 ; i < count; i ++){
+                for(int j = 0; j < count; j++){
+                    res += String.format("%3d" + " ",arr[i][j]);
+                }
+                res += String.format("\n");
+            }
 
+            return res;
         }
 
         @Override

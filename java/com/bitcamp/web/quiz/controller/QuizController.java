@@ -18,6 +18,7 @@ package com.bitcamp.web.quiz.controller;
 
 import com.bitcamp.web.quiz.service.*;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class QuizController {
@@ -199,7 +200,8 @@ public class QuizController {
                                 feb10Service.magicSquare();
                                 break;
                             case "7":
-
+                                res = feb10Service.zigzag();
+                                System.out.print(res);
                                 break;
                             case "8":
                                 res = feb10Service.rectangleStarPrint();
